@@ -8,7 +8,7 @@ const password=ref();
 </script>
 
 <template>
-<div id="page">
+<div id="page-login">
   <div class="header">
     <div class="logo"><img :src="logo" alt="失败的LOGO"/>
     </div>
@@ -50,13 +50,15 @@ const password=ref();
   隐藏的是form表单我们遵循Result风格的请求规范所以会发送一个PUT请求
   -->
   <div style="display:none">
+<form>
 
+</form>
   </div>
 </div>
 </template>
 
 <style scoped>
-#page{
+#page-login{
   width: 100%;
   height: 900px;
 }
