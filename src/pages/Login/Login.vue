@@ -5,6 +5,9 @@ let logo=ref("https://demo-minio.playedu.xyz/playedu/images/fsAsiOKacZweJLVswCuc
 let loginPage="https://demo.playedu.xyz/assets/banner-ef68003c.png";
 const username=ref();
 const password=ref();
+function login(event){
+
+}
 </script>
 
 <template>
@@ -34,7 +37,7 @@ const password=ref();
                                           show-password
                                          /></div>
           <div class="submit">
-            <el-button class="login-submit">立即登录</el-button>
+            <el-button class="login-submit" @click="login(event)">立即登录</el-button>
           </div>
 
         </div>
@@ -51,7 +54,9 @@ const password=ref();
   -->
   <div style="display:none">
 <form>
-
+<input type="hidden" name="_method" value="PUT"/>
+<input type="hidden" name="username"  v-model="username"/>
+<input type="hidden" name="password"  v-model="password"/>
 </form>
   </div>
 </div>
